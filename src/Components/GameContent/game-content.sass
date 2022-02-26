@@ -1,0 +1,46 @@
+.games-content
+  width: 100%
+  .game-card
+    position: relative
+    display: flex
+    flex-direction: column
+    word-wrap: break-word
+    background-clip: border-box
+    border: 1px solid rgba(0,0,0,.125)
+    border-radius: .25rem
+    .card-content
+      margin: 0 0 30px
+      padding: 30px
+      background-color: #1e1e1e
+      width: 100%
+      min-width: 280px
+      box-sizing: border-box
+      .game-titles
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .polygon-title
+          background-image: url('/assets/svg/polygon.svg')
+          background-size: contain
+          background-position: center
+          display: inline-flex
+          justify-content: center
+          align-items: center
+          background-repeat: no-repeat
+          width: 60px
+          height: 60px
+          font-size: 30px
+          font-weight: 700
+          text-align: center
+          color: #1e1e1e
+          text-transform: uppercase
+          margin-bottom: 30px
+        .game-name
+          margin: 0 0 30px 30px
+      .game-desc
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-column-gap: 50px
+        color: #afafaf
+        > span
+          line-height: 2.5

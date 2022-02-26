@@ -1,0 +1,52 @@
+.select-container
+  margin-bottom: 10px
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  .custom-select
+    display: flex
+    justify-content: center
+    align-items: center
+    background: #1e1e1e
+    color: #afafaf
+    width: 150px
+    height: 50px
+    box-sizing: border-box
+    font-family: 'Greycliff-SemiBold'
+    cursor: pointer
+    .selected
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 100%
+      padding: 10px
+      .select-arrow
+        transition: all 0.2s ease-in-out
+      .active
+        transform: rotate(180deg)
+
+.selectbox-container
+  margin-top: 150px
+  background: #1e1e1e
+  color: #afafaf
+  width: 150px
+  height: auto
+  box-sizing: border-box
+  position: absolute
+  font-family: 'Greycliff-SemiBold'
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex-direction: column
+  padding: 0 0 10px
+  box-shadow: 0 4px 12px 0 #000000
+  z-index: 1
+  .selectbox-values
+    margin-top: 5px
+    width: 100%
+    text-align: left
+    cursor: pointer
+    padding: 10px
+    box-sizing: border-box
+    &:hover
+      background: #3f3f3f
