@@ -13,12 +13,12 @@ const Header = () => {
   const updateDimensions = () => {
     setWidth(window.innerWidth);
   }
-  useEffect(() => {
+  useEffect(() => { // Window genisligi icin event listener
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
-  useEffect(() => {
+  useEffect(() => { // Window 1100 pxden buyukse mobile menu kapanir
     width > 1100 && setMenuActive(false)
   }, [width]);
 
@@ -33,8 +33,7 @@ const Header = () => {
             {e.name}
           </div>
         ))}
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
-        <button>LET'S PLAY</button>
+        <button>LET&apos;S PLAY</button>
       </div>
       <img src={!menuActive ? MenuIcon : CloseIcon} alt="menu" className="menu-icon" onClick={() => setMenuActive(!menuActive)}/>
       {width <= 1100 && menuActive && (

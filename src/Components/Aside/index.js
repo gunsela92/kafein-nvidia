@@ -20,7 +20,7 @@ const AsideFilters = ({games, onChanged}) => {
   return (
     <>
       <aside>
-        <h3>Browse Games</h3>
+        <h2>Browse Games</h2>
         <div className="filter-area">
           <CustomCheckbox games={games} onChanged={(value, type) => onChanged(value, type)}/>
         </div>

@@ -18,14 +18,14 @@ const CustomSelect = ({sortValue,onSelectValue}) => {
     <div className="select-container">
       <div className="custom-select">
         <div className="selected" onClick={() => setShowValues(!showValues)}>
-          <span>Sırala {selected}</span>
+          <span>Title {selected}</span>
           <img src={SelectArrow} alt="arrow" className={`select-arrow ${showValues ? "active" : ""}`}/>
         </div>
       </div>
       {showValues && (
         <div className="selectbox-container">
           {values?.map((item, index) => (
-            <div className="selectbox-values" key={index} onClick={() => handleSelect(item)}>Sırala {item}</div>
+            <div className="selectbox-values" key={index} onClick={() => handleSelect(item)}>Title {item}</div>
           ))}
         </div>
       )}

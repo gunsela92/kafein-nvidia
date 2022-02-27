@@ -6,11 +6,11 @@ const GameContent = ({games}) => {
   return (
     <section className="games-content">
       <div className="game-card">
-        {games?.map(e => (
-          <div className="card-content" key={e?.id}>
+        {games?.map(game => (
+          <div className="card-content" key={game?.id}>
             <div className="game-titles">
-              <span className="polygon-title">{e?.title?.charAt(0)}</span>
-              <span className="game-name">{e?.title}</span>
+              <span className="polygon-title">{game?.title?.charAt(0)}</span>
+              <span className="game-name">{game?.title}</span> {/*Normalde tasarimda bu alan yok ancak siralamanin belirgin olmasi acisinden ekledim*/}
             </div>
             <div className="game-desc">
               <span>

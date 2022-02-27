@@ -17,7 +17,7 @@ const MiddleContainer = ({games, searchValue}) => {
     }
   }, [sortValue, games])
 
-  useEffect(() => {
+  useEffect(() => { // Banner alanindaki search bu alanda uygulaniyor
     if (searchValue?.length > 0) {
       let res = processedGameList?.filter(game => game?.title?.toLowerCase() === searchValue?.toLowerCase())
       setProcessedGameList(res);
@@ -26,7 +26,7 @@ const MiddleContainer = ({games, searchValue}) => {
     }
   }, [searchValue]);
 
-  const sortData = useCallback((games) => {
+  const sortData = useCallback((games) => { // Alfabetik sıralama burada uygulaniyor
     const res = games?.sort((a, b) => {
       if (sortValue === "A-Z") {
         return a?.title?.localeCompare(b?.title);
@@ -37,7 +37,7 @@ const MiddleContainer = ({games, searchValue}) => {
     filterData([...res]);
   }, [sortValue]);
 
-  const filterData = (games, filterType) => {
+  const filterData = (games, filterType) => { // Sol taraftaki filtreler bu alanda uygulaniyor
     let result = [];
     if (filterType && filterType !== "" && gameStatusFilters?.length > 0) {
       gameStatusFilters?.map(filter => {
@@ -62,10 +62,6 @@ const MiddleContainer = ({games, searchValue}) => {
     filterData(games, "gameStatus");
   }, [gameStatusFilters]);
 
-  const handleSort = (value) => {
-    setSortValue(value);
-  }
-
   const handleCheckbox = (value, type) => {
     if (type === "gameStatus") {
       if (gameStatusFilters?.includes(value)) {
@@ -88,7 +84,7 @@ const MiddleContainer = ({games, searchValue}) => {
         <AsideFilters games={games} onChanged={(value, type) => handleCheckbox(value, type)}/>
       </section>
       <section className="content">
-        <CustomSelect onSelectValue={handleSort} sortValue={sortValue}/>
+        <CustomSelect onSelectValue={(value) => setSortValue(value)} sortValue={sortValue}/>
         <GameContent games={processedGameList}/>
       </section>
     </div>

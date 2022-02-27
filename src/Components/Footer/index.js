@@ -4,22 +4,24 @@ import footerConfig from "../../configs/footer-config";
 import Arrow from "../../assets/svg/select-arrow.svg";
 
 const Footer = () => {
+  const {footerLeft, footerRight, footerCenter, socialMedia} = footerConfig;
+
   return (
     <footer>
       <div className="footer-top">
         <div className="footer-list">
           <div className="footer-menu">
-            {footerConfig?.footerLeft?.map(item => (
+            {footerLeft?.map(item => (
               <span key={item?.id}>{item?.name}</span>
             ))}
           </div>
           <div className="footer-menu">
-            {footerConfig?.footerCenter?.map(item => (
+            {footerCenter?.map(item => (
               <span key={item?.id}>{item?.name}</span>
             ))}
           </div>
           <div className="footer-menu">
-            {footerConfig?.footerRight?.map(item => (
+            {footerRight?.map(item => (
               <span key={item?.id}>{item?.name}</span>
             ))}
           </div>
@@ -28,7 +30,7 @@ const Footer = () => {
           <div className="social-media">
             <span>Follow Us!</span>
             <div className="icons">
-              {footerConfig?.socialMedia?.map(item => (
+              {socialMedia?.map(item => (
                 <span key={item?.id}>
                   <img src={item?.icon} alt="socialMedia" />
                 </span>
