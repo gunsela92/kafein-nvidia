@@ -3,6 +3,7 @@ import "./aside-filters.sass";
 import PropTypes from "prop-types";
 import CustomCheckbox from "../CustomCheckbox";
 import CloseIcon from "../../assets/svg/cancel-gray.svg";
+import FilterIcon from "../../assets/svg/filter.svg";
 
 const AsideFilters = ({games, onChanged}) => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -27,6 +28,10 @@ const AsideFilters = ({games, onChanged}) => {
       </aside>
       {width <= 768 && (
         <>
+          <div className="mobile-filter-button" onClick={() => setMenuActive(true)}>
+            Filter
+            <img src={FilterIcon} alt="Filter"/>
+          </div>
           {menuActive && (
             <div className="filter-container">
               <div className="mobile-filter-title">
