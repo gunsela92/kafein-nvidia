@@ -1,3 +1,13 @@
+# Project made for kafein
+
+Single page web app used geforce-now data.
+
+Used eslint to format and code readability.
+
+Added comment lines to code.
+
+<hr/>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
